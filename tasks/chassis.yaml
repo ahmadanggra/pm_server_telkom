@@ -1,8 +1,4 @@
 ---
-- name: "Create folder {{ inventory_hostname }}"
-  file:
-    path: "{{playbook_dir}}/PM/{{ inventory_hostname }}"
-    state: directory
 - name: Get Firmware inventory information
   community.general.redfish_info:
     category: Update
@@ -19,7 +15,7 @@
     username: "{{ username }}"
     password: "{{ password }}"
   register: chassis
-- name: Write result on csv
+- name: "Write chassis inventory result on {{playbook_dir}}/PM/{{ inventory_hostname }}/{{ inventory_hostname }}_chassis.csv" 
   blockinfile:
     path: "{{playbook_dir}}/PM/{{ inventory_hostname }}/{{ inventory_hostname }}_chassis.csv"
     create: true
@@ -27,7 +23,7 @@
       ID,{{ inventory_hostname }}
       Model,{{ chassis.redfish_facts.chassis.entries.0.Model }}
       Serial Number,{{ chassis.redfish_facts.chassis.entries.0.SerialNumber }}
-      IP MGMT, {{ ansible_host }}
+      IP MGMT,{{ ansible_host }}
       Firmware,{{ firmware.redfish_facts.firmware.entries.0.Version }}
       CPU Utilization,
       Memory Utilization,

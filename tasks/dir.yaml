@@ -1,0 +1,5 @@
+---
+- name: "Create folder {{ inventory_hostname }}"
+  file:
+    path: "{{playbook_dir}}/PM/{{ inventory_hostname }}"
+    state: directory

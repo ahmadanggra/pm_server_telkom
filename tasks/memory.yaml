@@ -1,0 +1,20 @@
+---
+- name: Get memory inventory information
+  community.general.redfish_info:
+    category: Systems
+    command: GetMemoryInventory
+    baseuri: "{{ baseuri }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+  register: memory
+- name: "Write memory inventory result on {{playbook_dir}}/PM/{{ inventory_hostname }}/{{ inventory_hostname }}_memory.csv" 
+  blockinfile:
+    path: "{{playbook_dir}}/PM/{{ inventory_hostname }}/{{ inventory_hostname }}_memory.csv"
+    create: true
+    block: |
+      Name,Manufacture,Capacity,Type,Part Number,Serial Number
+      {% for item in memory.redfish_facts.memory.entries.0.1 %}
+      {{ item.Id  | regex_replace('mainboard', '') }},{{ item.Manufacturer }},{{ item.CapacityMiB }} MB,{{ item.MemoryDeviceType }},{{ item.PartNumber }},{{ item.SerialNumber }}
+      {% endfor %}
+  delegate_to: localhost
+  become: no

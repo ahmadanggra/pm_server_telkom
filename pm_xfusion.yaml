@@ -4,5 +4,12 @@
   connection: local
   gather_facts: false
   tasks:
+    - name: Create directory
+      import_tasks: tasks/dir.yaml
+      tags: directory
     - name: Chassis task
       import_tasks: tasks/chassis.yaml
+      tags: chassis
+    - name: Memory task
+      import_tasks: tasks/memory.yaml
+      tags: memory
