@@ -1,0 +1,8 @@
+---
+- name: Generate data ibmc for server xfusion PM
+  hosts: all_server
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: Chassis task
+      import_tasks: tasks/chassis.yaml
