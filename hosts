@@ -1,0 +1,10 @@
+[svr_type1]
+stesxi03er0410 ansible_host=10.60.38.130 baseuri=10.60.38.130
+stesxi03er0502 ansible_host=10.60.38.131 baseuri=10.60.38.131
+
+[all_server:children]
+svr_type1
+
+[all_server:vars]
+username=Administrator
+password=Admin@9000
