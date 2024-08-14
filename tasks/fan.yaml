@@ -1,0 +1,12 @@
+---
+- name: "Write fan inventory result on {{playbook_dir}}/PM/{{ inventory_hostname }}/{{ inventory_hostname }}_fan.csv" 
+  blockinfile:
+    path: "{{playbook_dir}}/PM/{{ inventory_hostname }}/{{ inventory_hostname }}_fan.csv"
+    create: true
+    block: |
+      Sensor Name,Speed (RPM),Status,Air Inlet Temperature
+      {% for item in chassis.redfish_facts.fan.entries %}
+      {{ item.Name }},{{ item.Reading }},{{ item.Status.Health }}
+      {% endfor %}
+  delegate_to: localhost
+  become: no

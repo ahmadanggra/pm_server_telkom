@@ -1,0 +1,25 @@
+---
+- name: "Write disk inventory result on {{playbook_dir}}/PM/{{ inventory_hostname }}/{{ inventory_hostname }}_disk.csv"
+  blockinfile:
+    path: "{{playbook_dir}}/PM/{{ inventory_hostname }}/{{ inventory_hostname }}_disk.csv"
+    create: true
+    block: |
+      Name,Manufacture,Media Type,Capacity,Serial Number,Status
+      {% for item in systems.redfish_facts.disk.entries.0.1.0.Drives %}
+      {{ item.Name }},{{ item.Manufacturer }},{{ item.MediaType }},{{ item.CapacityBytes | human_readable(unit='G') }},{{ item.SerialNumber }},{{ item.Status.Health }}
+      {% endfor %}
+  delegate_to: localhost
+  become: no
+- name: "Write raid controller inventory result on {{playbook_dir}}/PM/{{ inventory_hostname }}/{{ inventory_hostname }}_raid-contr.csv"
+  blockinfile:
+    path: "{{playbook_dir}}/PM/{{ inventory_hostname }}/{{ inventory_hostname }}_raid-contr.csv"
+    create: true
+    block: |
+      Name,{{ systems.redfish_facts.storage_controller.entries.0.1.0.Name }}
+      Firmware Version,{{ systems.redfish_facts.storage_controller.entries.0.1.0.FirmwareVersion }}
+      Manufacture,{{ systems.redfish_facts.storage_controller.entries.0.1.0.Manufacturer }}
+      Model,{{ systems.redfish_facts.storage_controller.entries.0.1.0.Model }}
+      Serial Number,{{ systems.redfish_facts.storage_controller.entries.0.1.0.SerialNumber }}
+      Status,{{ systems.redfish_facts.storage_controller.entries.0.1.0.Status.Health }}
+  delegate_to: localhost
+  become: no

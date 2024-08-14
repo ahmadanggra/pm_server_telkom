@@ -1,0 +1,25 @@
+---
+- name: Get Firmware inventory information
+  community.general.redfish_info:
+    category: Update
+    command: GetFirmwareInventory
+    baseuri: "{{ baseuri }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+  register: firmware
+- name: Get chassis inventory information
+  community.general.redfish_info:
+    category: Chassis
+    command: GetChassisInventory,GetChassisPower,GetPsuInventory,GetFanInventory
+    baseuri: "{{ baseuri }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+  register: chassis
+- name: Get systems inventory information
+  community.general.redfish_info:
+    category: Systems
+    command: all
+    baseuri: "{{ baseuri }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+  register: systems

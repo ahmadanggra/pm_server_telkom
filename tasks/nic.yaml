@@ -1,0 +1,17 @@
+---
+- name: "Write memory inventory result on {{playbook_dir}}/PM/{{ inventory_hostname }}/{{ inventory_hostname }}_nic.csv" 
+  blockinfile:
+    path: "{{playbook_dir}}/PM/{{ inventory_hostname }}/{{ inventory_hostname }}_nic.csv"
+    create: true
+    block: |
+      Nic Name,Card,PCIE Slot No.,Port,Speed,MAC/WWPN Address,Media Type,Status
+      {% for item in systems.redfish_facts.nic.entries.0.1 %}
+      {{ item.Id | regex_search('\(.*\)') | regex_replace('\(|\)') }},{{ item.Id  | regex_search('RiserCard\d') }},{{ item.Id  | regex_search('PCIeCard\d') | regex_search('\d') }},{{ item.Id  | regex_search('Port.*') | regex_search('\d') }},{{ item.SpeedMbps | default('0', true) }} Mbps,{{ item.MACAddress }},,
+      {% endfor %}
+      {% for item in systems.redfish_facts.health_report.entries.0.1.NetworkPorts %}
+      {% if 'Mainboard' in item.networkport_uri %}
+      {{ item.networkport_uri | regex_search('\(.*\)') | regex_replace('\(|\)')  }},{{ item.networkport_uri  | regex_search('Mainboard') }},{{ item.networkport_uri  | regex_search('PCIeCard\d') | regex_search('\d') }},{{ item.networkport_uri | regex_search('NetworkPorts.*') | regex_search('\d') }}
+      {% endif %}
+      {% endfor %}
+  delegate_to: localhost
+  become: no

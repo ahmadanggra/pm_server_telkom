@@ -1,20 +1,4 @@
 ---
-- name: Get Firmware inventory information
-  community.general.redfish_info:
-    category: Update
-    command: GetFirmwareInventory
-    baseuri: "{{ baseuri }}"
-    username: "{{ username }}"
-    password: "{{ password }}"
-  register: firmware
-- name: Get chassis inventory information
-  community.general.redfish_info:
-    category: Chassis
-    command: GetChassisInventory
-    baseuri: "{{ baseuri }}"
-    username: "{{ username }}"
-    password: "{{ password }}"
-  register: chassis
 - name: "Write chassis inventory result on {{playbook_dir}}/PM/{{ inventory_hostname }}/{{ inventory_hostname }}_chassis.csv" 
   blockinfile:
     path: "{{playbook_dir}}/PM/{{ inventory_hostname }}/{{ inventory_hostname }}_chassis.csv"

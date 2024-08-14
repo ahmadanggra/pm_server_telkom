@@ -1,0 +1,12 @@
+---
+- name: "Write psu inventory result on {{playbook_dir}}/PM/{{ inventory_hostname }}/{{ inventory_hostname }}_psu.csv" 
+  blockinfile:
+    path: "{{playbook_dir}}/PM/{{ inventory_hostname }}/{{ inventory_hostname }}_psu.csv"
+    create: true
+    block: |
+      Name,Manufacture,Model,Max Power,Part Number,Serial Number,Status
+      {% for item in chassis.redfish_facts.psu.entries %}
+      {{ item.Name }},{{ item.Manufacturer }},{{ item.Model }},{{ item.PowerCapacityWatts  }} Watt,{{ item.PartNumber }},{{ item.SerialNumber }},{{ item.Status.Health}}
+      {% endfor %}
+  delegate_to: localhost
+  become: no

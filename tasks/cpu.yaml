@@ -1,0 +1,12 @@
+---
+- name: "Write CPU inventory result on {{playbook_dir}}/PM/{{ inventory_hostname }}/{{ inventory_hostname }}_cpu.csv" 
+  blockinfile:
+    path: "{{playbook_dir}}/PM/{{ inventory_hostname }}/{{ inventory_hostname }}_cpu.csv"
+    create: true
+    block: |
+      Name,Manufacture,Model,Clock Speed,Max Speed,Cores/Threads,Status,Serial Number
+      {% for item in systems.redfish_facts.cpu.entries.0.1 %}
+      {{ item.Name }},{{ item.Manufacturer }},{{ item.Model }},{{ item.Model | regex_search('@.*') | regex_replace('\@\s', '') }},{{ item.MaxSpeedMHz }} MHz,{{ item.TotalCores }}/{{ item.TotalThreads }},{{ item.Status.State }}
+      {% endfor %}
+  delegate_to: localhost
+  become: no

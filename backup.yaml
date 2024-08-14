@@ -1,21 +1,21 @@
 ---
 - name: Generate data ibmc for server xfusion PM
-  hosts: stesxi03er0502
+  hosts: stesxi03er0410
   connection: local
   gather_facts: false
   tasks:
     - name: Get Data
       community.general.redfish_info:
         category: Systems
-        command: all
+        command: GetNicInventory
         baseuri: "{{ baseuri }}"
         username: "{{ username }}"
         password: "{{ password }}"
       register: result
     - name: Print chassis value
       debug:
-        #msg: "{{ result.redfish_facts.firmware.entries.0.Id }} {{ result.redfish_facts.firmware.entries.0.Version }}"
-        var: result
+        msg: "{{ result.redfish_facts.nic.entries.0.1 }}"
+        #var: result
         #msg: "{{ item.Id  | regex_replace('mainboard', '') }}"
         #msg: "{{ item }}"
       #loop: "{{ result.redfish_facts.memory.entries.0 }}"

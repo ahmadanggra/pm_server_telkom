@@ -7,9 +7,27 @@
     - name: Create directory
       import_tasks: tasks/dir.yaml
       tags: directory
+    - name: Get Systems Data Task
+      import_tasks: tasks/getdata.yaml
+      tags: get_data
     - name: Chassis task
       import_tasks: tasks/chassis.yaml
       tags: chassis
+    - name: CPU task
+      import_tasks: tasks/cpu.yaml
+      tags: cpu
     - name: Memory task
       import_tasks: tasks/memory.yaml
       tags: memory
+    - name: Fan task
+      import_tasks: tasks/fan.yaml
+      tags: fan
+    - name: PSU task
+      import_tasks: tasks/psu.yaml
+      tags: psu
+    - name: Storage task
+      import_tasks: tasks/storage.yaml
+      tags: storage
+    - name: NIC task
+      import_tasks: tasks/nic.yaml
+      tags: nic
