@@ -10,7 +10,7 @@
 - name: Get chassis inventory information
   community.general.redfish_info:
     category: Chassis
-    command: GetChassisInventory,GetChassisPower,GetPsuInventory,GetFanInventory
+    command: GetChassisInventory,GetChassisPower,GetPsuInventory,GetFanInventory,GetChassisThermals
     baseuri: "{{ baseuri }}"
     username: "{{ username }}"
     password: "{{ password }}"

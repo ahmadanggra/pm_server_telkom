@@ -6,7 +6,7 @@
     block: |
       Sensor Name,Speed (RPM),Status,Air Inlet Temperature
       {% for item in chassis.redfish_facts.fan.entries %}
-      {{ item.Name }},{{ item.Reading }},{{ item.Status.Health }}
+      {{ item.Name }},{{ item.Reading }},{{ item.Status.Health }},{{ chassis.redfish_facts.thermals.entries.0.ReadingCelsius }}
       {% endfor %}
   delegate_to: localhost
   become: no
