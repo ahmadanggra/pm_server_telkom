@@ -1,6 +1,6 @@
 ---
 - name: Generate data ibmc for server xfusion PM
-  hosts: all_server
+  hosts: jt_svr_type1
   connection: local
   gather_facts: false
   tasks:

@@ -1,9 +1,221 @@
-[svr_type1]
-stesxi03er0410 ansible_host=10.60.38.130 baseuri=10.60.38.130
-stesxi03er0502 ansible_host=10.60.38.131 baseuri=10.60.38.131
+[data_node]
+jt-hdp04a0102 ansible_host=10.62.216.2 baseuri=10.62.216.2
+jt-hdp04a0104 ansible_host=10.62.216.3 baseuri=10.62.216.3
+jt-hdp04a0106 ansible_host=10.62.216.4  baseuri=10.62.216.4
+jt-hdp04a0108 ansible_host=10.62.216.5  baseuri=10.62.216.5
+jt-hdp04a0110 ansible_host=10.62.216.6  baseuri=10.62.216.6
+jt-hdp04a0113 ansible_host=10.62.216.7  baseuri=10.62.216.7
+jt-hdp04a0115 ansible_host=10.62.216.8  baseuri=10.62.216.8
+jt-hdp04a0117 ansible_host=10.62.216.9  baseuri=10.62.216.9
+jt-hdp04a0119 ansible_host=10.62.216.10 baseuri=10.62.216.10
+jt-hdp04a0121 ansible_host=10.62.216.11 baseuri=10.62.216.11
+jt-hdp04a0124 ansible_host=10.62.216.12 baseuri=10.62.216.12
+jt-hdp04a0126 ansible_host=10.62.216.13 baseuri=10.62.216.13
+jt-hdp04a0128 ansible_host=10.62.216.14 baseuri=10.62.216.14
+jt-hdp04a0202 ansible_host=10.62.216.15 baseuri=10.62.216.15
+jt-hdp04a0204 ansible_host=10.62.216.16 baseuri=10.62.216.16
+jt-hdp04a0206 ansible_host=10.62.216.17 baseuri=10.62.216.17
+jt-hdp04a0208 ansible_host=10.62.216.18 baseuri=10.62.216.18
+jt-hdp04a0210 ansible_host=10.62.216.19 baseuri=10.62.216.19
+jt-hdp04a0213 ansible_host=10.62.216.20 baseuri=10.62.216.20
+jt-hdp04a0215 ansible_host=10.62.216.21 baseuri=10.62.216.21
+jt-hdp04a0302 ansible_host=10.62.216.22 baseuri=10.62.216.22
+jt-hdp04a0304 ansible_host=10.62.216.23 baseuri=10.62.216.23
+jt-hdp04a0306 ansible_host=10.62.216.24 baseuri=10.62.216.24
+jt-hdp04a0308 ansible_host=10.62.216.25 baseuri=10.62.216.25
+jt-hdp04a0310 ansible_host=10.62.216.26 baseuri=10.62.216.26
+jt-hdp04a0313 ansible_host=10.62.216.27 baseuri=10.62.216.27
+jt-hdp04a0315 ansible_host=10.62.216.28 baseuri=10.62.216.28
+jt-hdp04a0317 ansible_host=10.62.216.29 baseuri=10.62.216.29
+jt-hdp04a0319 ansible_host=10.62.216.30 baseuri=10.62.216.30
+jt-hdp04a0321 ansible_host=10.62.216.31 baseuri=10.62.216.31
+jt-hdp04a0324 ansible_host=10.62.216.32 baseuri=10.62.216.32
+jt-hdp04a0326 ansible_host=10.62.216.33 baseuri=10.62.216.33
+jt-hdp04a0328 ansible_host=10.62.216.34 baseuri=10.62.216.34
+jt-hdp04a0402 ansible_host=10.62.216.35 baseuri=10.62.216.35
+jt-hdp04a0404 ansible_host=10.62.216.36 baseuri=10.62.216.36
+jt-hdp04a0406 ansible_host=10.62.216.37 baseuri=10.62.216.37
+jt-hdp04a0408 ansible_host=10.62.216.38 baseuri=10.62.216.38
+jt-hdp04a0410 ansible_host=10.62.216.39 baseuri=10.62.216.39
+jt-hdp04a0413 ansible_host=10.62.216.40 baseuri=10.62.216.40
+jt-hdp04a0415 ansible_host=10.62.216.41 baseuri=10.62.216.41
+jt-hdp04a0502 ansible_host=10.62.216.42 baseuri=10.62.216.42
+jt-hdp04a0504 ansible_host=10.62.216.43 baseuri=10.62.216.43
+jt-hdp04a0506 ansible_host=10.62.216.44 baseuri=10.62.216.44
+jt-hdp04a0508 ansible_host=10.62.216.45 baseuri=10.62.216.45
+jt-hdp04a0510 ansible_host=10.62.216.46 baseuri=10.62.216.46
+jt-hdp04a0513 ansible_host=10.62.216.47 baseuri=10.62.216.47
+jt-hdp04a0515 ansible_host=10.62.216.48 baseuri=10.62.216.48
+jt-hdp04a0517 ansible_host=10.62.216.49 baseuri=10.62.216.49
+jt-hdp04a0519 ansible_host=10.62.216.50 baseuri=10.62.216.50
+jt-hdp04a0521 ansible_host=10.62.216.51 baseuri=10.62.216.51
+jt-hdp04a0524 ansible_host=10.62.216.52 baseuri=10.62.216.52
+jt-hdp04a0526 ansible_host=10.62.216.53 baseuri=10.62.216.53
+jt-hdp04a0528 ansible_host=10.62.216.54 baseuri=10.62.216.54
+jt-hdp04a0602 ansible_host=10.62.216.55 baseuri=10.62.216.55
+jt-hdp04a0604 ansible_host=10.62.216.56 baseuri=10.62.216.56
+jt-hdp04a0606 ansible_host=10.62.216.57 baseuri=10.62.216.57
+jt-hdp04a0608 ansible_host=10.62.216.58 baseuri=10.62.216.58
+jt-hdp04a0610 ansible_host=10.62.216.59 baseuri=10.62.216.59
+jt-hdp04a0613 ansible_host=10.62.216.60 baseuri=10.62.216.60
+jt-hdp04a0615 ansible_host=10.62.216.61 baseuri=10.62.216.61
+jt-hdp04a0702 ansible_host=10.62.216.62 baseuri=10.62.216.62
+jt-hdp04a0704 ansible_host=10.62.216.63 baseuri=10.62.216.63
+jt-hdp04a0706 ansible_host=10.62.216.64 baseuri=10.62.216.64
+jt-hdp04a0708 ansible_host=10.62.216.65 baseuri=10.62.216.65
+jt-hdp04a0710 ansible_host=10.62.216.66 baseuri=10.62.216.66
+jt-hdp04a0713 ansible_host=10.62.216.67 baseuri=10.62.216.67
+jt-hdp04a0715 ansible_host=10.62.216.68 baseuri=10.62.216.68
+
+[master_node]
+jt-hdp04a0802 ansible_host=10.62.216.69 baseuri=10.62.216.69
+jt-hdp04a0804 ansible_host=10.62.216.70 baseuri=10.62.216.70
+jt-hdp04a0806 ansible_host=10.62.216.71 baseuri=10.62.216.71
+jt-hdp04a0808 ansible_host=10.62.216.72 baseuri=10.62.216.72
+jt-hdp04a0810 ansible_host=10.62.216.73 baseuri=10.62.216.73
+jt-hdp04a0813 ansible_host=10.62.216.74 baseuri=10.62.216.74
+jt-hdp04a0815 ansible_host=10.62.216.75 baseuri=10.62.216.75
+jt-hdp04a0817 ansible_host=10.62.216.76 baseuri=10.62.216.76
+
+[edge_node]
+jt-hdp04a0902 ansible_host=10.62.216.77 baseuri=10.62.216.77
+jt-hdp04a0904 ansible_host=10.62.216.78 baseuri=10.62.216.78
+jt-hdp04a0906 ansible_host=10.62.216.79 baseuri=10.62.216.79
+jt-hdp04a0908 ansible_host=10.62.216.80 baseuri=10.62.216.80
+jt-hdp04a0910 ansible_host=10.62.216.81 baseuri=10.62.216.81
+
+[archive_node]
+jt-hdp02h0902 ansible_host=10.62.216.82  baseuri=10.62.216.82
+jt-hdp02h0904 ansible_host=10.62.216.83  baseuri=10.62.216.83
+jt-hdp02h0906 ansible_host=10.62.216.84  baseuri=10.62.216.84
+jt-hdp02h0908 ansible_host=10.62.216.85  baseuri=10.62.216.85
+jt-hdp02h0910 ansible_host=10.62.216.86  baseuri=10.62.216.86
+jt-hdp02h0913 ansible_host=10.62.216.87  baseuri=10.62.216.87
+jt-hdp02h0915 ansible_host=10.62.216.88  baseuri=10.62.216.88
+jt-hdp02h0917 ansible_host=10.62.216.89  baseuri=10.62.216.89
+jt-hdp02h0919 ansible_host=10.62.216.90  baseuri=10.62.216.90
+jt-hdp02h0921 ansible_host=10.62.216.91  baseuri=10.62.216.91
+jt-hdp02h0924 ansible_host=10.62.216.92  baseuri=10.62.216.92
+jt-hdp02h0926 ansible_host=10.62.216.93  baseuri=10.62.216.93
+jt-hdp02h0928 ansible_host=10.62.216.94  baseuri=10.62.216.94
+jt-hdp02h0930 ansible_host=10.62.216.95  baseuri=10.62.216.95
+jt-hdp02h0932 ansible_host=10.62.216.96  baseuri=10.62.216.96
+jt-hdp04a1002 ansible_host=10.62.216.97  baseuri=10.62.216.97
+jt-hdp04a1004 ansible_host=10.62.216.98  baseuri=10.62.216.98
+jt-hdp04a1006 ansible_host=10.62.216.99  baseuri=10.62.216.99
+jt-hdp04a1008 ansible_host=10.62.216.100 baseuri=10.62.216.100
+jt-hdp04a1010 ansible_host=10.62.216.101 baseuri=10.62.216.101
+jt-hdp04a1013 ansible_host=10.62.216.102 baseuri=10.62.216.102
+jt-hdp04a1015 ansible_host=10.62.216.103 baseuri=10.62.216.103
+jt-hdp04a1017 ansible_host=10.62.216.104 baseuri=10.62.216.104
+jt-hdp04a1019 ansible_host=10.62.216.105 baseuri=10.62.216.105
+jt-hdp04a1021 ansible_host=10.62.216.106 baseuri=10.62.216.106
+jt-hdp04a1024 ansible_host=10.62.216.107 baseuri=10.62.216.107
+jt-hdp04a1026 ansible_host=10.62.216.108 baseuri=10.62.216.108
+jt-hdp04a1028 ansible_host=10.62.216.109 baseuri=10.62.216.109
+jt-hdp04a1030 ansible_host=10.62.216.110 baseuri=10.62.216.110
+jt-hdp04a1032 ansible_host=10.62.216.111 baseuri=10.62.216.111
+
+[jt_svr_type1]
+jt2esxi04fr1102	ansible_host=10.8.36.31    baseuri=10.8.36.31
+jt2esxi04fr1104	ansible_host=10.8.36.32    baseuri=10.8.36.32
+jt2esxi04fr1106	ansible_host=10.8.36.33    baseuri=10.8.36.33
+jt2esxi04fr1108	ansible_host=10.8.36.34    baseuri=10.8.36.34
+jt2esxi04fr1110	ansible_host=10.8.36.35    baseuri=10.8.36.35
+jt2esxi04fr1113	ansible_host=10.8.36.36    baseuri=10.8.36.36
+jt2esxi04fr1115	ansible_host=10.8.36.37    baseuri=10.8.36.37
+jt2esxi04fr1117	ansible_host=10.8.36.38    baseuri=10.8.36.38
+jtesxi02hr1102	ansible_host=10.62.38.107  baseuri=10.62.38.107
+jtesxi02hr1104	ansible_host=10.62.38.108  baseuri=10.62.38.108
+jtesxi02hr1106	ansible_host=10.62.38.109  baseuri=10.62.38.109
+jtesxi02hr1108	ansible_host=10.62.38.110  baseuri=10.62.38.110
+jtesxi02hr1110	ansible_host=10.62.38.111  baseuri=10.62.38.111
+jtesxi02hr1202	ansible_host=10.62.38.112  baseuri=10.62.38.112
+jtesxi02hr1204	ansible_host=10.62.38.113  baseuri=10.62.38.113
+jtesxi02hr1206	ansible_host=10.62.38.114  baseuri=10.62.38.114
+jtesxi02hr1208	ansible_host=10.62.38.115  baseuri=10.62.38.115
+jtesxi02hr1210	ansible_host=10.62.38.116  baseuri=10.62.38.116
+
+[st_svr_type1]
+stesxi03er0402	ansible_host=10.60.38.126  baseuri=10.60.38.126
+stesxi03er0404	ansible_host=10.60.38.127  baseuri=10.60.38.127
+stesxi03er0406	ansible_host=10.60.38.128  baseuri=10.60.38.128
+stesxi03er0408	ansible_host=10.60.38.129  baseuri=10.60.38.129
+stesxi03er0410	ansible_host=10.60.38.130  baseuri=10.60.38.130
+stesxi03er0502	ansible_host=10.60.38.131  baseuri=10.60.38.131
+stesxi03er0504	ansible_host=10.60.38.132  baseuri=10.60.38.132
+stesxi03er0506	ansible_host=10.60.38.133  baseuri=10.60.38.133
+stesxi03er0508	ansible_host=10.60.38.134  baseuri=10.60.38.134
+stesxi03er0510	ansible_host=10.60.38.135  baseuri=10.60.38.135
+
+[svr_type2]
+jt2cn04er1302 ansible_host=10.8.36.39 baseuri=10.8.36.39
+jt2cn04er1304 ansible_host=10.8.36.40 baseuri=10.8.36.40
+jt2cn04er1306 ansible_host=10.8.36.41 baseuri=10.8.36.41
+jt2cn04er1308 ansible_host=10.8.36.42 baseuri=10.8.36.42
+jt2cn04er1310 ansible_host=10.8.36.43 baseuri=10.8.36.43
+jt2cn04er1313 ansible_host=10.8.36.44 baseuri=10.8.36.44
+jt2cn04er1315 ansible_host=10.8.36.45 baseuri=10.8.36.45
+jt2cn04er1317 ansible_host=10.8.36.46 baseuri=10.8.36.46
+jt2cn04er1319 ansible_host=10.8.36.47 baseuri=10.8.36.47
+jt2cn04er1321 ansible_host=10.8.36.48 baseuri=10.8.36.48
+jt2cn04er1402 ansible_host=10.8.36.49 baseuri=10.8.36.49
+jt2cn04er1404 ansible_host=10.8.36.50 baseuri=10.8.36.50
+jt2cn04er1406 ansible_host=10.8.36.51 baseuri=10.8.36.51
+jt2cn04er1408 ansible_host=10.8.36.52 baseuri=10.8.36.52
+jt2cn04er1410 ansible_host=10.8.36.53 baseuri=10.8.36.53
+jt2cn04er1413 ansible_host=10.8.36.54 baseuri=10.8.36.54
+jt2cn04er1415 ansible_host=10.8.36.55 baseuri=10.8.36.55
+jt2cn04er1417 ansible_host=10.8.36.56 baseuri=10.8.36.56
+jt2cn04er1419 ansible_host=10.8.36.57 baseuri=10.8.36.57
+jt2cn04er1421 ansible_host=10.8.36.58 baseuri=10.8.36.58
+
+[svr_type3]
+jt2cn04er1424 ansible_host=10.8.36.59  baseuri=10.8.36.59
+jt2cn04er1426 ansible_host=10.8.36.60  baseuri=10.8.36.60
+jt2cn04er1428 ansible_host=10.8.36.61  baseuri=10.8.36.61
+
+[svr_type4]
+jt2cn02cr0824 ansible_host=10.62.38.117 baseuri=10.62.38.117
+
+[svr_type5]
+jt2cn04er1502 ansible_host=10.8.36.63 baseuri=10.8.36.63
+jt2cn04er1504 ansible_host=10.8.36.64 baseuri=10.8.36.64
+jt2cn04er1506 ansible_host=10.8.36.65 baseuri=10.8.36.65
+jt2cn04er1508 ansible_host=10.8.36.66 baseuri=10.8.36.66
+jt2cn04er1510 ansible_host=10.8.36.67 baseuri=10.8.36.67
+jt2cn04er1513 ansible_host=10.8.36.68 baseuri=10.8.36.68
+jt2cn04er1515 ansible_host=10.8.36.69 baseuri=10.8.36.69
+jt2cn04er1517 ansible_host=10.8.36.70 baseuri=10.8.36.70
+jt2cn04er1519 ansible_host=10.8.36.71 baseuri=10.8.36.71
+jt2cn04er1521 ansible_host=10.8.36.72 baseuri=10.8.36.72
+jt2cn04er1524 ansible_host=10.8.36.73 baseuri=10.8.36.73
+jt2cn04er1526 ansible_host=10.8.36.74 baseuri=10.8.36.74
+jt2cn04er1528 ansible_host=10.8.36.75 baseuri=10.8.36.75
+
+[svr_type6]
+jt2cn04er1002 ansible_host=10.8.36.76 baseuri=10.8.36.76
+jt2cn04er1004 ansible_host=10.8.36.77 baseuri=10.8.36.77
+jt2cn04er1006 ansible_host=10.8.36.78 baseuri=10.8.36.78
+
+[svr_type7]
+jt2cn04er1008v ansible_host=10.8.36.79 baseuri=10.8.36.79
+jt2cn04er1010v ansible_host=10.8.36.80 baseuri=10.8.36.80
+jt2cn04er1013v ansible_host=10.8.36.81 baseuri=10.8.36.81
 
 [all_server:children]
-svr_type1
+jt_svr_type1
+st_svr_type1
+svr_type2
+svr_type3
+svr_type4
+svr_type5
+svr_type6
+svr_type7
+data_node
+master_node
+edge_node
+archive_node
 
 [all_server:vars]
 username=Administrator
