@@ -23,3 +23,14 @@
       Status,{{ systems.redfish_facts.storage_controller.entries.0.1.0.Status.Health }}
   delegate_to: localhost
   become: no
+- name: "Write volume inventory result on {{playbook_dir}}/PM/{{ inventory_hostname }}/{{ inventory_hostname }}_volume.csv"
+  blockinfile:
+    path: "{{playbook_dir}}/PM/{{ inventory_hostname }}/{{ inventory_hostname }}_volume.csv"
+    create: true
+    block: |
+      Name,Capacity,Mode,Status,Members
+      {% for item in systems.redfish_facts.volume.entries.0.1.0.Volumes %}
+      {{ item.Name }},{{ item.CapacityBytes | human_readable(unit='G') }},{{ item.VolumeType }},{{ item.Status.Health }},{% for disks in item.Linked_drives %}{{ disks.Id | regex_search('Disk.*') }}{% if not loop.last %};{% endif %}{% endfor %}
+      {% endfor %}
+  delegate_to: localhost
+  become: no
